@@ -17,34 +17,34 @@ $('document').ready(function () {
     dataType: 'json',
     success: function (data) {
       $('SECTION.places').append(data.map(place => {
-        return `<ARTICLE>
-                  <DIV class="title">
-                    <H2>${place.name}</H2>
-                    <DIV class="price_by_night">
+        return `<article>
+                  <div class="title">
+                    <h2>${place.name}</h2>
+                    <div class="price_by_night">
                       ${place.price_by_night}
-                    </DIV>
-                  </DIV>
-                  <DIV class="information">
-                    <DIV class="max_guest">
-                      <I class="fa fa-users fa-3x" aria-hidden="true"></I>
-                      </BR>
+                    </div>
+                  </div>
+                  <div class="information">
+                    <div class="max_guest">
+                      <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+                      </br>
                       ${place.max_guest} Guests
-                    </DIV>
-                    <DIV class="number_rooms">
-                      <I class="fa fa-bed fa-3x" aria-hidden="true"></I>
-                      </BR>
+                    </div>
+                    <div class="number_rooms">
+                      <i class="fa fa-bed fa-3x" aria-hidden="true"></i>
+                      </br>
                       ${place.number_rooms} Bedrooms
-                    </DIV>
-                    <DIV class="number_bathrooms">
-                      <I class="fa fa-bath fa-3x" aria-hidden="true"></I>
-                      </BR>
+                    </div>
+                    <div class="number_bathrooms">
+                      <i class="fa fa-bath fa-3x" aria-hidden="true"></i>
+                      </br>
                       ${place.number_bathrooms} Bathrooms
-                    </DIV>
-                  </DIV>
-                  <DIV class="description">
+                    </div>
+                  </div>
+                  <div class="description">
                     ${place.description}
-                  </DIV>
-                </ARTICLE>`;
+                  </div>
+                </article>`;
       }));
     }
   });
